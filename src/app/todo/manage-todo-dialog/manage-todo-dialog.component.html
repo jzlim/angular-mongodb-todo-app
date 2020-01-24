@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>New Todo</h1>
+<mat-dialog-content>
+    <form>
+        <mat-form-field>
+          <input matInput placeholder="What to do?"
+                 name="content"
+                 [(ngModel)]="content"
+                 (ngModelChange)="validate();">
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions fxLayout="row" fxLayoutAlign="space-between none">
+    <button mat-flat-button mat-dialog-close color="warn">Cancel</button>
+    <button mat-flat-button color="primary" (click)="saveTodo();">Save</button>
+</mat-dialog-actions>
