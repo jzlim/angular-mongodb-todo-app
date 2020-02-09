@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { ManageTodoDialogComponent } from '../manage-todo-dialog/manage-todo-dialog.component';
 import { TodoListComponent } from '../todo-list/todo-list.component';
 
@@ -9,7 +9,7 @@ import { TodoListComponent } from '../todo-list/todo-list.component';
   styleUrls: ['./todo-container.component.scss']
 })
 export class TodoContainerComponent implements OnInit {
-  @ViewChild(TodoListComponent, { static: false }) todoListComponent: TodoListComponent;
+  @ViewChild(TodoListComponent) todoListComponent: TodoListComponent;
 
   constructor(
     private dialog: MatDialog
